@@ -3,9 +3,8 @@ services:
     name: n8n
     env: docker
     plan: free
-    repo: https://github.com/cardi2007/n8n-render
+    image: n8nio/n8n
     branch: main
-    dockerfilePath: ./docker/images/n8n/Dockerfile
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
@@ -17,4 +16,3 @@ services:
         value: n8n.onrender.com
       - key: WEBHOOK_URL
         value: https://n8n.onrender.com
-
